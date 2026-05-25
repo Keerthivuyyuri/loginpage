@@ -1,13 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
       <ToastContainer position="top-right" />
+
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Login />} />
@@ -18,13 +20,3 @@ function App() {
 }
 
 export default App;
-
-// export default function App() {
-//   return (
-//     <div className="min-h-screen bg-red-500 flex items-center justify-center">
-//       <h1 className="text-white text-5xl font-bold">
-//         Tailwind Working
-//       </h1>
-//     </div>
-//   );
-// }
